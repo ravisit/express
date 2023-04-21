@@ -1,12 +1,8 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function(req, res){
-   res.send('Hello World!');
-});
+var route = require('./route')
 
-app.get('/home', (req, res)=>{
-   res.send('Welcome to Express!')
-})
+app.use('/', route);
 
 app.listen(3000);
